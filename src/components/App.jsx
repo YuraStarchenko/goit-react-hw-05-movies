@@ -1,11 +1,19 @@
-import { NavLink, y, Routes } from 'react-router-dom';
+import { NavLink, Route, Routes } from 'react-router-dom';
 import { GlobalStyle } from 'GlobalStyle';
 import { Container } from './Container.styled.js';
+import Home from './pages/Home.jsx';
 
 export const App = () => {
   return (
-		<Container>
-			<nav>HOME</nav>
+    <Container>
+      <nav>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/Trending">Movies</NavLink>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Movies" element={<div>Movies🐷</div>} />
+      </Routes>
       <GlobalStyle />
     </Container>
   );
