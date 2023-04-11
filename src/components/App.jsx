@@ -8,7 +8,7 @@ export const App = () => {
     <Container>
       <nav>
         <NavLink to="/">Home</NavLink>
-        <NavLink to="/Trending">Movies</NavLink>
+        <NavLink to="/Movies">Movies</NavLink>
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
