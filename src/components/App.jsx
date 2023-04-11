@@ -1,16 +1,12 @@
+import { NavLink, y, Routes } from 'react-router-dom';
+import { GlobalStyle } from 'GlobalStyle';
+import { Container } from './Container.styled.js';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+		<Container>
+			<nav>HOME</nav>
+      <GlobalStyle />
+    </Container>
   );
 };
