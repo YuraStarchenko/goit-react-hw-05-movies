@@ -1,7 +1,7 @@
 import { NavLink, Route, Routes } from 'react-router-dom';
 import { GlobalStyle } from 'GlobalStyle';
 import { Container } from './Container.styled.js';
-import Home from './pages/Home.jsx';
+import Home from './pages/Home/Home.jsx';
 
 export const App = () => {
   return (
