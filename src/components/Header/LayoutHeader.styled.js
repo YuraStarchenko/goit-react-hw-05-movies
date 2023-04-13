@@ -14,7 +14,7 @@ export const Header = styled.header`
   gap: 12px;
   padding: 8px 0;
   margin-bottom: 16px;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #94a3b8;
 
   > nav {
     display: flex;
@@ -29,13 +29,19 @@ export const Logo = styled.p`
 
 export const Link = styled(NavLink)`
   padding: 8px 16px;
-  border-radius: 4px;
+  border-radius: 25px;
   text-decoration: none;
   color: black;
+  opacity: 2;
   font-weight: 500;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    opacity: 0.9;
+  }
 
   &.active {
     color: white;
-    background-color: orangered;
+    background-color: #355f99;
   }
 `;

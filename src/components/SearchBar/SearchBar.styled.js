@@ -5,12 +5,12 @@ export const Header = styled.header`
   left: 0;
   position: sticky;
   z-index: 1100;
-	border-radius: 50px;
+  border-radius: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 48px;
-	padding: 12px, 24px, 12px, 24px;
+  padding: 12px, 24px, 12px, 24px;
 `;
 
 export const Form = styled.form`
@@ -30,18 +30,20 @@ export const Button = styled.button`
   justify-content: center;
   align-items: center;
   border: 0;
-  width: 55px;
-  height: 48px;
+  margin-left: 2px;
+  width: 50px;
+  height: 45px;
   background-size: 40%;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.6;
-  border-radius: 30px;
+  opacity: 2;
+  border-radius: 50%;
+  background-color: #355f99;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   outline: none;
   &:hover {
-    opacity: 2;
+    opacity: 0.9;
   }
 `;
 
@@ -49,6 +51,7 @@ export const Input = styled.input`
   display: inline-block;
   width: 100%;
   font: inherit;
+  height: 48px;
   border: none;
   outline: none;
   padding-left: 4px;
