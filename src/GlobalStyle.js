@@ -9,7 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-	background-color: #e1b6b6;
+	background-color: rgb(167 190 221);
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
