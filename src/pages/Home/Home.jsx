@@ -1,10 +1,14 @@
 import { useEffect } from 'react';
+import { Div } from './Home.styled.js';
+import { Container } from 'components/Container.styled.js';
 
 const Home = () => {
-  useEffect(() => {
-    // https://api.themoviedb.org/3/movie/550?api_key=fcfa30881c3e984af96d841d25a29426
-  },[]);
-  return <div>Trending today 🤷‍♂️</div>;
+  useEffect(() => {}, []);
+  return (
+    <Container>
+      <Div>Trending Today 🔝</Div>
+    </Container>
+  );
 };
 
 export default Home;
