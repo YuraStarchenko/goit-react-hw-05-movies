@@ -15,10 +15,10 @@ export const SearchBar = ({ onSubmit }) => {
   const handleSubmit = e => {
     e.preventDefault();
     if (inputValue.trim() === '') {
-      toast('Enter the name of the Movies 🎥 ', {
+			toast('Enter the name of the Movies 🎥 ', {
         style: {
           borderRadius: '25px',
-          background: 'rgb(53 95 153 / 50%)',
+          background: 'rgb(53 95 153 / 80%)',
           color: '#fff',
         },
       });
