@@ -1,8 +1,8 @@
 import { NavLink, Route, Routes } from 'react-router-dom';
 import { GlobalStyle } from 'GlobalStyle';
 import { Container } from './Container.styled.js';
-import Home from './pages/Home/Home.jsx';
-import Movies from './pages/Movies/Movies.jsx';
+import Home from '../pages/Home/Home.jsx';
+import Movies from '../pages/Movies/Movies.jsx';
 
 export const App = () => {
   return (
