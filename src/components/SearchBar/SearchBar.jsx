@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import toast, { Toaster } from 'react-hot-toast';
 import { Header, Form, Button, Input } from './SearchBar.styled.js';
 import { BsSearch } from 'react-icons/bs';
 
@@ -15,7 +15,13 @@ export const SearchBar = ({ onSubmit }) => {
   const handleSubmit = e => {
     e.preventDefault();
     if (inputValue.trim() === '') {
-      Notify.info('Enter the name of the Movies 🎥 ');
+      toast('Enter the name of the Movies 🎥 ', {
+        style: {
+          borderRadius: '20px',
+          background: '#355f99',
+          color: '#fff',
+        },
+      });
       return;
     }
     onSubmit(inputValue);
@@ -37,6 +43,7 @@ export const SearchBar = ({ onSubmit }) => {
           placeholder="Search Cinema and Series"
           onChange={inputHandleChange}
         />
+        <Toaster position="top-center" reverseOrder={false} />
       </Form>
     </Header>
   );
