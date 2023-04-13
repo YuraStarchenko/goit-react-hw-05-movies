@@ -15,7 +15,7 @@ export const SearchBar = ({ onSubmit }) => {
   const handleSubmit = e => {
     e.preventDefault();
     if (inputValue.trim() === '') {
-      Notify.info('Enter the name of the picture 🌅');
+      Notify.info('Enter the name of the Movies 🎥 ');
       return;
     }
     onSubmit(inputValue);
