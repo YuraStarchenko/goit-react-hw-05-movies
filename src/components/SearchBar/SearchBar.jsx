@@ -17,8 +17,8 @@ export const SearchBar = ({ onSubmit }) => {
     if (inputValue.trim() === '') {
       toast('Enter the name of the Movies 🎥 ', {
         style: {
-          borderRadius: '20px',
-          background: '#355f99',
+          borderRadius: '25px',
+          background: 'rgb(53 95 153 / 50%)',
           color: '#fff',
         },
       });
