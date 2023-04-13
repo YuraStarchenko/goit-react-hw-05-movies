@@ -2,6 +2,6 @@ import styled from 'styled-components';
 
 export const Div = styled.div`
   font-weight: 700;
-  font-size: 23px;
+  font-size: 15px;
   margin: 0;
 `;
