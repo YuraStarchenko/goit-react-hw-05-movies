@@ -5,3 +5,6 @@ export const Div = styled.div`
   font-size: 15px;
   margin: 0;
 `;
+
+export const List = styled.ul``;
+export const Item = styled.li``;
