@@ -1,21 +1,15 @@
 import { useParams, useLocation } from 'react-router-dom';
-import { BackLink } from '../components/BackLink';
-import { getDetailsMovie } from 'service/movieApi';
+import { BackLink } from './MovieDetails.styled.js';
 
 
 const MovieDetails = () => {
-  const { id } = useParams();
-  const movies = getDetailsMovie(id);
   const location = useLocation();
   const backLinkHref = location.state?.from ?? '/products';
   return (
     <main>
-      <BackLink to={backLinkHref}>Back to products</BackLink>
+      <BackLink to={backLinkHref}>Back to Go</BackLink>
       <img src="https://via.placeholder.com/960x240" alt="" />
       <div>
-        <h2>
-          Product - {movies.name} - {id}
-        </h2>
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus
           sunt excepturi nesciunt iusto dignissimos assumenda ab quae cupiditate
