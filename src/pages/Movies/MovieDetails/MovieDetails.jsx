@@ -4,7 +4,9 @@ import { BackLink } from './MovieDetails.styled.js';
 
 const MovieDetails = () => {
   const location = useLocation();
-  const backLinkHref = location.state?.from ?? '/products';
+	const backLinkHref = location.state?.from ?? '/products';
+	  const { productId } = useParams();
+	
   return (
     <main>
       <BackLink to={backLinkHref}>Back to Go</BackLink>
