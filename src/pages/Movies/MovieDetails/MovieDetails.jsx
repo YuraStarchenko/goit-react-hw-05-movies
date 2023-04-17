@@ -84,11 +84,7 @@ const MovieDetails = () => {
               <MenuItem>
                 <LinkItems to="reviews">Reviews</LinkItems>
               </MenuItem>
-              <MenuItem>
-                <LinkItems to="trailer">Trailer</LinkItems>
-              </MenuItem>
             </MenuList>
-
             <Suspense>
               <Outlet />
             </Suspense>
