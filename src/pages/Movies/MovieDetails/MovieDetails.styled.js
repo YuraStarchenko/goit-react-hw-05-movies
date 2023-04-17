@@ -22,9 +22,17 @@ export const Content = styled.div`
 `;
 
 export const MovieInfo = styled.div`
+  @media screen and (min-width: 1280px) {
+    display: flex;
+  }
 `;
 
-export const MovieText = styled.div``;
+export const MovieText = styled.div`
+  margin: 20px 0;
+  @media screen and (min-width: 1280px) {
+    margin-left: 30px;
+  }
+`;
 
 export const MenuList = styled.ul`
   display: flex;

@@ -8,19 +8,25 @@ export const Div = styled.div`
 `;
 
 export const List = styled.ul`
-  padding-top: 30px;
-  margin-left: 10px;
+  padding: 30px 0;
 `;
 
 export const Item = styled.li`
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  padding: 10px;
 `;
 
 export const LinkHome = styled(Link)`
   text-decoration: none;
   font-weight: 700;
+  display: flex;
   text-transform: uppercase;
   :hover {
     color: orangered;
   }
+`;
+
+export const Icon = styled.div`
+  margin-right: 10px;
 `;
