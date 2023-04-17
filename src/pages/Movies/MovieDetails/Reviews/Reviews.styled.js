@@ -1,7 +1,10 @@
 import styled from 'styled-components';
 
 
-export const TextP = styled.p``;
+export const TextP = styled.p`
+  font-weight: 700;
+  margin: 20px 0 30px 0;
+`;
 
 export const ListReviews = styled.ul`
   padding-bottom: 50px;
