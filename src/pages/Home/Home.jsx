@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Div, List, Item } from './Home.styled.js';
+import { useLocation } from 'react-router-dom';
+import { Div, LinkHome, List, Item } from './Home.styled.js';
 import { Container } from 'components/Container.styled.js';
 import { getTrendingMuvies } from 'service/movieApi.jsx';
 
@@ -11,9 +11,7 @@ const Home = () => {
 
   useEffect(() => {
     try {
-      getTrendingMuvies().then(r =>
-        setTrendingMuvies([...r.results])
-      );
+      getTrendingMuvies().then(r => setTrendingMuvies([...r.results]));
     } catch (error) {
       console.log(error);
     }
@@ -26,9 +24,9 @@ const Home = () => {
         {trendingMuvies.map(muvies => {
           return (
             <Item key={muvies.id}>
-              <Link to={`movies/${muvies.id}`} state={{ from: location }}>
+              <LinkHome to={`movies/${muvies.id}`} state={{ from: location }}>
                 {muvies.title}
-              </Link>
+              </LinkHome>
             </Item>
           );
         })}

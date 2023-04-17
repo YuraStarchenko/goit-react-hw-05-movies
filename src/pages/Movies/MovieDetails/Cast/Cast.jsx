@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { isEmpty } from 'lodash';
-import { CastWrapper } from './Cast.styled';
+import { ListCast, ItemCast, TextCast, ImgCast, TextEm } from './Cast.styled';
 import { getCreditsMovie } from 'service/movieApi';
 
 const Cast = () => {
@@ -23,7 +23,7 @@ const Cast = () => {
         <p>We don't have any information about cast for this movie</p>
       ) : (
         <>
-          <CastWrapper>
+          <ListCast>
             {filmCast.map(actor => {
               let source = '';
               if (!actor.profile_path) {
@@ -32,14 +32,14 @@ const Cast = () => {
               } else
                 source = `https://image.tmdb.org/t/p/w500/${actor.profile_path}`;
               return (
-                <li key={actor.id}>
-                  <img src={source} alt={`${actor.name}`} />
-                  <p>{actor.name}</p>
-                  <em>{actor.character}</em>
-                </li>
+                <ItemCast key={actor.id}>
+                  <ImgCast src={source} alt={`${actor.name}`} />
+                  <TextCast>{actor.name}</TextCast>
+                  <TextEm>{actor.character}</TextEm>
+                </ItemCast>
               );
             })}
-          </CastWrapper>
+          </ListCast>
         </>
       )}
     </>

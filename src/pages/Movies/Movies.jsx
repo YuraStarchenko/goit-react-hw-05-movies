@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import { SearchBar } from 'components/SearchBar/SearchBar';
-import { Link, useLocation, useSearchParams } from 'react-router-dom';
+import { useLocation, useSearchParams } from 'react-router-dom';
 import { Container } from 'components/Container.styled';
 import { getSearchMovies } from 'service/movieApi';
 import logo from '../../img/not-found.png';
-import { Img } from './Movies.styled';
+import { ImgMovies, ListMovies, ItemMovies, LinkMovies } from './Movies.styled';
 
 const Movies = () => {
   const [searchResults, setSearchResults] = useState([]);
@@ -32,19 +32,19 @@ const Movies = () => {
     <Container>
       <SearchBar onSubmit={FormSubmit} />
       {searchResults.length === 0 && query !== '' && (
-        <Img src={logo} alt="Logo" />
-			)}
-      <ul>
+        <ImgMovies src={logo} alt="Logo" />
+      )}
+      <ListMovies>
         {searchResults.map(results => {
           return (
-            <li key={results.id}>
-              <Link to={`${results.id}`} state={{ from: location }}>
+            <ItemMovies key={results.id}>
+              <LinkMovies to={`${results.id}`} state={{ from: location }}>
                 {results.title}
-              </Link>
-            </li>
+              </LinkMovies>
+            </ItemMovies>
           );
         })}
-      </ul>
+      </ListMovies>
     </Container>
   );
 };

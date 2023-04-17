@@ -1,10 +1,17 @@
-import { Link, Outlet, useLocation, useParams } from 'react-router-dom';
+import { Outlet, useLocation, useParams } from 'react-router-dom';
 import {
   StyledLink,
   MovieInfo,
   MovieText,
   MenuList,
   MenuItem,
+  ImgDetalis,
+  TextDetalis,
+  TitleDetalis,
+  Information,
+  Content,
+  TitleInfotmation,
+  LinkItems,
 } from './MovieDetails.styled.js';
 import { HiArrowLeft } from 'react-icons/hi';
 import { isEmpty } from 'lodash';
@@ -42,11 +49,11 @@ const MovieDetails = () => {
       </StyledLink>
 
       {!isEmpty(filmInfo) && (
-        <>
+        <Content>
           <MovieInfo>
-            <img src={source} alt="poster" width="300px" />
+            <ImgDetalis src={source} alt="poster" width="300px" />
             <MovieText>
-              <h1>
+              <TitleDetalis>
                 {filmInfo.title}
 
                 {filmInfo.release_date && (
@@ -59,35 +66,37 @@ const MovieDetails = () => {
                     ({filmInfo.release_date.slice(0, 4)})
                   </span>
                 )}
-              </h1>
+              </TitleDetalis>
 
-              <p>User score: {Math.round(filmInfo.vote_average * 10) + '%'}</p>
-              <b>Overview</b>
-              <p>{filmInfo.overview}</p>
-              <b>Genres</b>
-              <p>
+              <TextDetalis>
+                User score: {Math.round(filmInfo.vote_average * 10) + '%'}
+              </TextDetalis>
+              <TextDetalis>Overview</TextDetalis>
+              <TextDetalis>{filmInfo.overview}</TextDetalis>
+              <TextDetalis>Genres</TextDetalis>
+              <TextDetalis>
                 {filmInfo.genres.length > 0
                   ? filmInfo.genres.map(genre => genre.name).join(', ')
                   : 'No information about genres'}
-              </p>
+              </TextDetalis>
             </MovieText>
           </MovieInfo>
-          <div>
-            <h2>Additional information</h2>
+          <Information>
+            <TitleInfotmation>Additional information</TitleInfotmation>
             <MenuList>
               <MenuItem>
-                <Link to="cast">Cast</Link>
+                <LinkItems to="cast">Cast</LinkItems>
               </MenuItem>
               <MenuItem>
-                <Link to="reviews">Reviews</Link>
+                <LinkItems to="reviews">Reviews</LinkItems>
               </MenuItem>
             </MenuList>
 
             <Suspense>
               <Outlet />
             </Suspense>
-          </div>
-        </>
+          </Information>
+        </Content>
       )}
     </Container>
   );
