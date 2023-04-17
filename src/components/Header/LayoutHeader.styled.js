@@ -23,7 +23,12 @@ export const Header = styled.header`
 
 export const Logo = styled.p`
   font-weight: 700;
-	font-size: 23px;
+  display: flex;
+  color: #0f172a;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding-right: 10px;
+  font-size: 30px;
   margin: 0;
 `;
 
