@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { Div, LinkHome, List, Item, Img} from './Home.styled.js';
+import { Div, LinkHome, List, Item, Img } from './Home.styled.js';
 import { Container } from 'components/Container.styled.js';
 import { getTrendingMuvies } from 'service/movieApi.jsx';
 
@@ -32,12 +32,13 @@ const Home = () => {
           return (
             <Item key={id}>
               <LinkHome to={`movies/${id}`} state={{ from: location }}>
-                  <Img
-                    src={`${viewPoster(poster_path)}`}
-                    alt={title}
-                    width="300"
-                    height="450"
-                  />                
+                <Img
+                  src={`${viewPoster(poster_path)}`}
+                  alt={title}
+                  width="300"
+                  height="400"
+                />
+                {title}
               </LinkHome>
             </Item>
           );

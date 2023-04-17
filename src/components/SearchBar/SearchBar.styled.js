@@ -14,6 +14,7 @@ export const Header = styled.header`
 `;
 
 export const Form = styled.form`
+  margin-top: 30px;
   display: flex;
   align-items: center;
   width: 500px;

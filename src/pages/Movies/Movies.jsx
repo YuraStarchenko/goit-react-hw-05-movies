@@ -4,7 +4,13 @@ import { useLocation, useSearchParams } from 'react-router-dom';
 import { Container } from 'components/Container.styled';
 import { getSearchMovies } from 'service/movieApi';
 import logo from '../../img/not-found.png';
-import { ImgMovies, ListMovies, ItemMovies, LinkMovies } from './Movies.styled';
+import {
+  ImgMovies,
+  ListMovies,
+  ItemMovies,
+  LinkMovies,
+  Img,
+} from './Movies.styled';
 
 const Movies = () => {
   const [searchResults, setSearchResults] = useState([]);
@@ -19,14 +25,19 @@ const Movies = () => {
   useEffect(() => {
     if (query) {
       try {
-        getSearchMovies(query).then(r => {
-          setSearchResults([...r.results]);
-        });
+        getSearchMovies(query).then(r => setSearchResults(r.results));
       } catch (error) {
         console.log(error);
       }
     }
   }, [query]);
+
+  const viewPoster = poster_path => {
+    if (poster_path === null) {
+      return 'https://wipfilms.net/wp-content/data/posters/tt0338683.jpg';
+    }
+    return `https://image.tmdb.org/t/p/w300${poster_path}`;
+  };
 
   return (
     <Container>
@@ -35,11 +46,16 @@ const Movies = () => {
         <ImgMovies src={logo} alt="Logo" />
       )}
       <ListMovies>
-        {searchResults.map(results => {
+        {searchResults.map(({ id, poster_path, title }) => {
           return (
-            <ItemMovies key={results.id}>
-              <LinkMovies to={`${results.id}`} state={{ from: location }}>
-                {results.title}
+            <ItemMovies key={id}>
+              <LinkMovies to={`${id}`} state={{ from: location }}>
+                <Img
+                  src={`${viewPoster(poster_path)}`}
+                  alt={title}
+                  width="300"
+                  height="450"
+                />
               </LinkMovies>
             </ItemMovies>
           );
