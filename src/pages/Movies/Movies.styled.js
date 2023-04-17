@@ -9,11 +9,12 @@ export const ImgMovies = styled.img`
 export const ListMovies = styled.ul`
   padding: 0;
   margin: 0;
-  margin-top: 30px;
+  margin-top: 40px;
   list-style: none;
   gap: 20px;
   margin-bottom: 50px;
   display: flex;
+	justify-content: center;
   flex-wrap: wrap;
   @media screen and (min-width: 768px) {
     display: flex;

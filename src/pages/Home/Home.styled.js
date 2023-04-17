@@ -49,4 +49,5 @@ export const LinkHome = styled(Link)`
 
 export const Img = styled.img`
   border-radius: 20px;
+  width: 400px;
 `;

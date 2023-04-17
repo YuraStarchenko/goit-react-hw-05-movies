@@ -38,7 +38,6 @@ const Home = () => {
                   width="300"
                   height="400"
                 />
-                {title}
               </LinkHome>
             </Item>
           );
