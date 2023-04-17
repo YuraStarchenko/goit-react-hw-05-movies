@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const TextP = styled.p``;
 
 export const ListReviews = styled.ul`
-  padding: 50px 0;
+  padding-bottom: 50px;
 `;
 export const ItemReviews = styled.li`
   margin-top: 50px;
