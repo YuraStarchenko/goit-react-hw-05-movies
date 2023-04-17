@@ -47,7 +47,7 @@ export const TitleInfotmation = styled.h2`
 export const MenuItem = styled.li``;
 export const ImgDetalis = styled.img`
   border-radius: 15px;
-	width: 400px;
+  width: 400px;
 `;
 export const LinkItems = styled(Link)`
   text-decoration: none;
@@ -69,3 +69,7 @@ export const TitleDetalis = styled.h1`
 `;
 
 export const Information = styled.div``;
+export const SpanYear = styled.span`
+  padding: 0px 10px;
+  color: #a01d1d;
+`;

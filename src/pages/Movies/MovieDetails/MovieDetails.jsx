@@ -12,6 +12,7 @@ import {
   Content,
   TitleInfotmation,
   LinkItems,
+  SpanYear,
 } from './MovieDetails.styled.js';
 import { HiArrowLeft } from 'react-icons/hi';
 import { isEmpty } from 'lodash';
@@ -57,14 +58,9 @@ const MovieDetails = () => {
                 {filmInfo.title}
 
                 {filmInfo.release_date && (
-                  <span
-                    style={{
-                      padding: '0px 10px',
-                      color: '#a01d1d',
-                    }}
-                  >
+                  <SpanYear>
                     ({filmInfo.release_date.slice(0, 4)})
-                  </span>
+                  </SpanYear>
                 )}
               </TitleDetalis>
 
