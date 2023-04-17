@@ -4,7 +4,7 @@ import { Link, useLocation, useSearchParams } from 'react-router-dom';
 import { Container } from 'components/Container.styled';
 import { getSearchMovies } from 'service/movieApi';
 import logo from '../../img/not-found.png';
-import { Text, Img, Div } from './Movies.styled';
+import { Img } from './Movies.styled';
 
 const Movies = () => {
   const [searchResults, setSearchResults] = useState([]);
@@ -33,15 +33,7 @@ const Movies = () => {
       <SearchBar onSubmit={FormSubmit} />
       {searchResults.length === 0 && query !== '' && (
         <Img src={logo} alt="Logo" />
-      )}
-
-      {searchResults.length > 0 && (
-        <Div>
-          <Text>
-            Search results <em>{query}</em>:
-          </Text>
-        </Div>
-      )}
+			)}
       <ul>
         {searchResults.map(results => {
           return (
