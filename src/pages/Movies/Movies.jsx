@@ -3,6 +3,7 @@ import { SearchBar } from 'components/SearchBar/SearchBar';
 import { Link, useLocation, useSearchParams } from 'react-router-dom';
 import { Container } from 'components/Container.styled';
 import { getSearchMovies } from 'service/movieApi';
+import { Text, Icon, Div } from './Movies.styled';
 
 const Movies = () => {
   const [searchResults, setSearchResults] = useState([]);
@@ -30,13 +31,17 @@ const Movies = () => {
     <Container>
       <SearchBar onSubmit={FormSubmit} />
       {searchResults.length === 0 && query !== '' && (
-        <p>The search has not given any results</p>
+        <Div>
+          <Icon>🤷</Icon>
+        </Div>
       )}
 
       {searchResults.length > 0 && (
-        <h1>
-          Search results for keyword <em>{query}</em>:
-        </h1>
+        <Div>
+          <Text>
+            Search results <em>{query}</em>:
+          </Text>
+        </Div>
       )}
       <ul>
         {searchResults.map(results => {

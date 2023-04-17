@@ -37,7 +37,7 @@ const MovieDetails = () => {
   return (
     <Container>
       <StyledLink to={goBack.current}>
-        <HiArrowLeft size="24" />
+        <HiArrowLeft size="15" />
         Go to Back
       </StyledLink>
 
