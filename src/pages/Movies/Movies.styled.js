@@ -16,7 +16,7 @@ export const Div = styled.div`
 `;
 
 export const Img = styled.img`
-  padding-top: 100px;
+  padding-top: 50px;
   background-image: url('/src/img/not-found.png');
 `;
 
