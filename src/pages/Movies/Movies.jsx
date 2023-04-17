@@ -3,7 +3,7 @@ import { SearchBar } from 'components/SearchBar/SearchBar';
 import { Link, useLocation, useSearchParams } from 'react-router-dom';
 import { Container } from 'components/Container.styled';
 import { getSearchMovies } from 'service/movieApi';
-import logo from '../../img/Logo.jpg';
+import logo from '../../img/not-found.png';
 import { Text, Img, Div } from './Movies.styled';
 
 const Movies = () => {

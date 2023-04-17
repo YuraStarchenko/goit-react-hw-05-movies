@@ -17,7 +17,7 @@ export const Div = styled.div`
 
 export const Img = styled.img`
   padding-top: 100px;
-  background-image: url('/src/img/3828537.jpg');
+  background-image: url('/src/img/not-found.png');
 `;
 
 export const Text = styled.p`
