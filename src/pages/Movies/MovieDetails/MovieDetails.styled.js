@@ -47,6 +47,7 @@ export const TitleInfotmation = styled.h2`
 export const MenuItem = styled.li``;
 export const ImgDetalis = styled.img`
   border-radius: 15px;
+	width: 400px;
 `;
 export const LinkItems = styled(Link)`
   text-decoration: none;
