@@ -58,9 +58,7 @@ const MovieDetails = () => {
                 {filmInfo.title}
 
                 {filmInfo.release_date && (
-                  <SpanYear>
-                    ({filmInfo.release_date.slice(0, 4)})
-                  </SpanYear>
+                  <SpanYear>({filmInfo.release_date.slice(0, 4)})</SpanYear>
                 )}
               </TitleDetalis>
 
@@ -85,6 +83,9 @@ const MovieDetails = () => {
               </MenuItem>
               <MenuItem>
                 <LinkItems to="reviews">Reviews</LinkItems>
+              </MenuItem>
+              <MenuItem>
+                <LinkItems to="trailer">Trailer</LinkItems>
               </MenuItem>
             </MenuList>
 
