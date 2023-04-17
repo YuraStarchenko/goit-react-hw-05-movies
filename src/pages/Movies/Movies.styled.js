@@ -15,9 +15,9 @@ export const Div = styled.div`
   text-align: center;
 `;
 
-export const Icon = styled.p`
-  width: 100px;
-  height: 100px;
+export const Img = styled.img`
+  padding-top: 100px;
+  background-image: url('/src/img/3828537.jpg');
 `;
 
 export const Text = styled.p`
